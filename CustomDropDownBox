@@ -1,0 +1,50 @@
+<style>
+.styled-select select 
+	{
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
+.styled-select 
+	{
+   width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url('img/down_arrow_select.jpg') no-repeat right #ddd;
+   border: 1px solid #ccc;
+   }
+   #para
+   {
+	   color:red;
+   }
+</style>
+
+<script>
+
+   function changeFunc() 
+   {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    document.getElementById("para").style.color=selectedValue;
+   }
+
+</script>
+  
+<div class="styled-select">
+   <select id="selectBox" onchange="changeFunc();">
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+      <option value="Pink">Pink</option>
+   </select>
+</div>
+<p id="para">
+A quick brown fox jumps over the lazy dog.
+A quick brown fox jumps over the lazy dog.
+A quick brown fox jumps over the lazy dog.
+</p>
